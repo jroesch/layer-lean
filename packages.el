@@ -33,17 +33,28 @@
     :load-path lean-emacs-path
     :config
     (progn
-      (spacemacs/set-leader-keys-for-major-mode
-       'lean-mode
+
+      (spacemacs/declare-prefix-for-mode 'lean-mode "mc" "compile")
+      (spacemacs/declare-prefix-for-mode 'lean-mode "mh" "documentation")
+      (spacemacs/declare-prefix-for-mode 'lean-mode "mp" "process")
+      (spacemacs/declare-prefix-for-mode 'lean-mode "mg" "tags")
+      (spacemacs/declare-prefix-for-mode 'lean-mode "mT" "toggles")
+
+      (spacemacs/set-leader-keys-for-major-mode 'lean-mode
        "cc" 'lean-std-exe
-       "pr" 'lean-server-restart-process
-       "pf" 'lean-set-option
+       "pr" 'lean-server-restart
+       ;; "pf" 'lean-set-option
        "hh" 'lean-eldoc-documentation-function
        "ht" 'lean-show-type
-       "hg" 'lean-show-goal-at-pos
+       ;; "hg" 'lean-show-goal-at-pos
        "hk" 'quail-show-key
-       "hi" 'lean-show-id-keyword-info
+       ;; "hi" 'lean-show-id-keyword-info
        "f" 'lean-fill-placeholder
-       "gu" 'lean-generate-tags
-       "gg" 'lean-find-tag
-       "sc" 'lean-eval-cmd))))
+       ;; "gu" 'lean-generate-tags
+       "gg" 'lean-find-definition
+       ;; these aren't really ui toggles, they show/hide windows
+       "?" 'lean-toggle-show-goal
+       "e" 'lean-toggle-next-error
+       "Tm" 'lean-message-boxes-toggle
+       "SPC" 'lean-hole
+       ))))
