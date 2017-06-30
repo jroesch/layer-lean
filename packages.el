@@ -1,3 +1,14 @@
+;;; packages.el --- Lean Layer packages File for Spacemacs
+;;
+;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
+;;
+;; Author: Max Willsey
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
 (defconst lean-packages
   '(mmm-mode
     company
