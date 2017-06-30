@@ -19,8 +19,7 @@
   (use-package lean-mode
     :defer t
     :mode ("\\.lean\\'" . lean-mode)
-    :load-path
-    "/usr/local/share/emacs/site-lisp/lean"
+    :load-path lean-emacs-path
     :config
     (progn
       (spacemacs/set-leader-keys-for-major-mode
