@@ -10,21 +10,8 @@
 ;;; License: GPLv3
 
 (defconst lean-packages
-  '(mmm-mode
-    company
-    dash-functional
-    f
-    flycheck
-    dash
-    (lean-mode :location local)
+  '((lean-mode :location local)
     ))
-
-(defun lean/init-mmm-mode ())
-(defun lean/init-company ())
-(defun lean/init-dash-functional ())
-(defun lean/init-f ())
-(defun lean/init-flycheck ())
-(defun lean/init-dash ())
 
 (defun lean/init-lean-mode ()
   (use-package lean-mode
